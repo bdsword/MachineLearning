@@ -10,8 +10,8 @@ featureSet = [];
 I2 = I.^2;
 
 if imageChannel == 1
-   u0_I  = colfilt(I, [1 1], 'sliding', @matrixAverageIntensity);
-   u0_I2 = colfilt(I2, [1 1], 'sliding', @matrixAverageIntensity);
+   u0_I  = I;
+   u0_I2 = I2;
    sigma0 = sqrt( u0_I2 - u0_I.^2 );
    
    u3_I  = colfilt(I, [7 7], 'sliding', @matrixAverageIntensity);
